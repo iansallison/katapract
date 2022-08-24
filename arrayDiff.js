@@ -1,8 +1,3 @@
-
 function arrayDiff(a, b) {
-    return a.filter(function(i){
-        return i != b;
-    });
-  }
-
-return arrayDiff([1,2],[1]);
+    return a.filter(e => !b.includes(e))
+}
