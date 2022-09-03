@@ -1,7 +1,4 @@
-var countBits = function(n) {
-  let bin = n.toString(2).split('');
-  let bits = bin.filter(e => e=='1');
-  return bits.length;
-};
-
-document.getElementById("demo").innerHTML = countBits(10);
+function alphabetPosition(text) {
+  const alpha = 'abcdefghijklmnopqrstuvwxyz';
+  return text.split('').map(e => alpha.includes(e.toLowerCase())? alpha.indexOf(e.toLowerCase())+1:'').filter(e => e != '').join(' ')
+}
